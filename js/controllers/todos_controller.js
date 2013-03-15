@@ -39,5 +39,9 @@ Todos.TodosController = Ember.ArrayController.extend({
 
   completed: function () {
     return this.filterProperty('isCompleted', true).get('length');
+  }.property('@each.isCompleted'),
+  
+  allAreDone: function (key, value) {
+    return !!this.get('length') && this.everyProperty('isCompleted', true);
   }.property('@each.isCompleted')
 });
