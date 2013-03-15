@@ -17,9 +17,9 @@
 
       <section id="main">
         <ul id="todo-list">
-          {{#each controller}}
+          {{#each controller itemController="todo"}}
             <li {{bindAttr class="isCompleted:completed"}}>
-              <input type="checkbox" class="toggle">
+              {{view Ember.Checkbox checkedBinding="isCompleted" class="toggle"}}
               <label>{{title}}</label><button class="destroy"></button>
             </li>
           {{/each}}
@@ -64,5 +64,6 @@
   <script src="js/models/store.js"></script>
   <script src="js/models/todo.js"></script>
   <script src="js/controllers/todos_controller.js"></script>
+  <script src="js/controllers/todo_controller.js"></script>
 </body>
 </html>
