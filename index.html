@@ -18,9 +18,13 @@
       <section id="main">
         <ul id="todo-list">
           {{#each controller itemController="todo"}}
-            <li {{bindAttr class="isCompleted:completed"}}>
-              {{view Ember.Checkbox checkedBinding="isCompleted" class="toggle"}}
-              <label>{{title}}</label><button class="destroy"></button>
+            <li {{bindAttr class="isCompleted:completed isEditing:editing"}}>
+              {{#if isEditing}}
+                <input class='edit'>
+              {{else}}
+                {{view Ember.Checkbox checkedBinding="isCompleted" class="toggle"}}
+                <label {{action "editTodo" on="doubleClick"}}>{{title}}</label><button class="destroy"></button>
+              {{/if}}
             </li>
           {{/each}}
         </ul>
