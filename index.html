@@ -17,7 +17,7 @@
       <section id="main">
         <ul id="todo-list">
           {{#each controller}}
-            <li>
+            <li {{bindAttr class="isCompleted:completed"}}>
               <input type="checkbox" class="toggle">
               <label>{{title}}</label><button class="destroy"></button>
             </li>
