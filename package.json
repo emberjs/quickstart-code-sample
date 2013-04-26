@@ -1,0 +1,20 @@
+{
+  "name": "quickstart-code-sample",
+  "version": "0.0.0",
+  "description": "ERROR: No README.md file found!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/emberjs/quickstart-code-sample.git"
+  },
+  "author": "",
+  "license": "BSD",
+  "gitHead": "b5d52fa2ced5f87df408c1097eb0e7152100df71",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-concat": "~0.3.0"
+  }
+}
